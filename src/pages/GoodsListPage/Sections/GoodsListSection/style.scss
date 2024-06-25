@@ -1,0 +1,53 @@
+.goodsListSectionInner{
+    box-sizing: border-box;
+    .goodsTotalAndSortSection{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        font-size: 14px;
+        color: #333;
+    }
+    .goodsTotal{
+        font-weight: 700;
+    }
+    .sortSection{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        li{
+            margin-left: 8px;
+            display: flex;
+            list-style: none;
+            a{
+                color: rgb(153, 153, 153);
+                text-decoration: none;
+                font-size: 14px;
+            }
+        }
+        .sortItem::before{
+            content: "";
+            width: 1px;
+            height: 10px;
+            margin-right: 10px;
+            background-color: rgb(226, 226, 226);
+        }
+        .selected a{
+            color: black;
+            font-weight: 700;
+        }
+    }
+    .goodsSection{
+        display: grid;
+        // grid-template-columns: repeat(3, 249px); 
+        grid-template-columns: repeat(auto-fill, 249px);
+        gap: 31px 18px;
+        width: 100%;
+        .goodsList-goods{
+            width: 249px;
+            img{
+                width: 249px;
+            }
+        }
+    }
+}

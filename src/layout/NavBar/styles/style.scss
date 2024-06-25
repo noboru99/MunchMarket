@@ -1,0 +1,197 @@
+.NavBarSection{
+    width: 100%;
+    min-width: 1200px;
+    height: 161px;    
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+    position: relative;
+    .NavBarContainer{
+        width: 1050px;
+        height: 100px;
+        
+        margin: 0 auto;
+        .NavAuthItems{
+            display: flex;
+            justify-content: flex-end;
+            height: 20%;
+            margin-top: 0.625rem;
+            .linkBtn{
+                 color: red;
+            }
+            span{
+                
+                font-size: 12px;
+                cursor: pointer;
+                display: block;
+                margin-left: 10px;
+                
+            }
+            .registerBtn{
+                // color: rgb(95, 0, 128);
+                color: red;
+            }
+        }
+        .NavMain{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            .NavHeader{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 25%;
+                height: 100%;
+                
+
+                .logoImg{
+                    width: 82px;
+                    height: 42px;
+                }
+                .NavTitleMarketKurly{
+                    font-size: 18px;
+                    color: rgb(95, 0, 128);
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+                .NavTitleBeautyKurly{
+                    font-size: 18px;
+                    color: rgb(181, 181, 181);
+                    font-weight: 500;
+                    position: relative;
+                    cursor: pointer;
+                }
+                .NavTitleBeautyKurly:hover{
+                    color: rgb(95, 0, 128);
+                }
+                .NavTitleBeautyKurly:after{
+                    content: "";
+                    position: absolute;
+                    left: -25%;
+                    width: 1px;
+                    height: 18px;
+                    
+                    
+                    background-color: rgb(226, 226, 226);
+
+                }
+            }
+            .NavSearch{
+                width: 30%;
+                height: 100%;
+                border: 1px solid black;
+                align-content: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 350px;
+                height: 48px;
+                border: 1px solid rgb(95, 0, 128);
+                border-radius: 6px;
+
+                padding-left: 14px;
+                
+                .SearchBox{
+                    width: 300px;
+                    border-style: none;
+                    outline: none;
+                    font-size: 16px;
+                    letter-spacing: -0.33px;
+                }
+                .magnifyingGlassIcon{
+                    width: 30px;
+                    height: 30px;
+                    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgzNnYzNkgweiIvPgogICAgICAgIDxnIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Im0yNi4wODEgMjYuMDgxLTQuMTItNC4xMk0xNi40NjcgMjMuMzM0YTYuODY3IDYuODY3IDAgMSAwIDAtMTMuNzM0IDYuODY3IDYuODY3IDAgMCAwIDAgMTMuNzM0eiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==") 0px 0px no-repeat;
+                    margin: 10px 10px 15px 10px;
+                    border-style: none;
+                    align-content: center;
+                    cursor: pointer;
+                }
+            }
+            .NavIcons{
+                width: 148px;
+                height: 36px;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    width: 36px;
+                    height: 36px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }    
+    .NavCategoryItems{
+    width: 1050px;
+    height: 60px;
+    // box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    .categorySection{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+        .categoryImg{
+            background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MS43SDBWMHptMCA2LjE1aDE2djEuN0gwdi0xLjd6bTAgNi4xNWgxNlYxNEgwdi0xLjd6IiBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==") 0px 0px no-repeat;
+            width: 16px;
+            height: 14px;
+            margin-right: 14px;
+            
+        }
+        .categoryText{
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .categoryText:hover{
+            color: rgb(95, 0, 128);
+        }
+    }
+    .categoryLinks{
+        width: 600px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+            font-weight: 500;
+            cursor: pointer;
+        }
+        p:hover{
+            color: rgb(95, 0, 128);
+            border-bottom: 1px solid rgb(95, 0, 128);
+        }
+    }
+        .SpecialCategory{
+            height: 32px;
+            padding: 0px 16px;
+            border-radius: 18px;
+            border: 1px solid rgb(238, 238, 238);
+            color: rgb(102, 102, 102);
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: -0.32px;
+            align-content: center;
+            .SpecialCategoryText{
+                color: rgb(95, 0, 128);
+                font-weight: 500;
+            }
+        }
+    }
+    .categoryModal{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+

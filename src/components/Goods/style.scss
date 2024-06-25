@@ -1,0 +1,64 @@
+.goods{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img{
+        border-radius: 5px;
+    }
+    .addToCartBtnSection{
+        width: 100%;
+        height: 36px;
+        margin-top:10px;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 4px;
+        position: relative;
+        box-sizing: border-box;
+        .addToCartBtn{
+            position: absolute;
+            width: 100%;
+            height: 36px;
+            border-style: none;
+            background-color: transparent;
+            span{
+                font-size: 16px;
+                font-weight: 500;
+                margin-right: 3px;
+            }
+        }
+    }
+    .goodsTitle{
+        font-size: 16px;
+        font-weight: 400;
+        padding: 10px 8px 0px 0px;
+        margin-bottom: 8px;
+    }
+    .originalPrice{
+        padding-top: 2px;
+        color: rgb(181, 181, 181);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: line-through;
+        padding-right: 8px;
+    }
+    .discountSection{
+        display: flex;
+        padding-right: 8px;
+        .discountPercentage{
+            font-size: 16px;
+            font-weight: 700;
+            color: rgb(250, 98, 47);
+            margin-right: 8px;
+        }
+        .discountedPrice{
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+    .chatCountSection{
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: rgb(153, 153, 153);
+    }
+}

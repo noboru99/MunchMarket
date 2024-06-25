@@ -1,0 +1,38 @@
+.goodsListInner{
+    width: 1050px;
+    margin: 0 auto;
+    // border: 1px solid black;
+
+    .categoriesTitleSection{
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 28px;
+        color: rgb(51, 51, 51);
+        text-align: center;
+    }
+    .subCategoriesSection{
+        margin-top: 28px;
+    }
+    .filterAndGoodsSection{
+        margin-top: 50px;
+        margin-bottom: 75px;
+        display: flex;
+        border: 1px solid black;
+        .filterSection{
+            border: 1px solid black;
+            position: sticky;
+            width: 285px;
+            // flex-shrink: 0;
+            height: 100%;
+            max-height: calc(-120px + 100vh);
+            top: 80px;
+            margin-right: 50px;
+            border-bottom: 1px solid rgb(238, 238, 238);
+            overflow: hidden scroll;
+            scrollbar-width: none;
+        }
+        .goodsListSection{
+            width: 100%;
+        }
+    }
+}

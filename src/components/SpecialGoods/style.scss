@@ -1,0 +1,38 @@
+.SPGoodsInner{
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-sizing: border-box;
+    
+    display: flex;
+    padding: 80px 0px;
+    justify-content: space-between;
+    .SPGoodsTextSection{
+        width: 250px;
+        .SPGoodsText{
+            font-size: 28px;
+            color: rgb(51, 51, 51);
+            font-weight: 500;
+        }
+        .more-sale-message{
+            padding-top: 11px;
+            font-size: 16px;
+            color: rgb(153, 153, 153);
+            font-weight: normal;
+        }
+        .urgent-message{
+            padding-top: 26px;
+            font-size: 14px;
+            color: rgb(204, 204, 204);
+            font-weight: normal;
+        }
+    }
+    .SPGoodsSection{
+        width: 694px;
+        
+        img{
+            width: 694px;
+            height: 347px;
+        }
+    }
+}

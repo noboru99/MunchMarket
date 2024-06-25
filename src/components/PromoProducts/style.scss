@@ -1,0 +1,73 @@
+.PromoProductsSection{
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 100px;
+    .PromoProductsTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 28px;
+            font-weight: 500;
+            color: rgb(51, 51, 51);
+        }
+        img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .PromoProductsSubTitle{
+        text-align: center;
+        font-size: 16px;
+        color: rgb(153, 153, 153);
+        margin-top: 12px;
+    }
+    .buttonPosition{
+        position: relative;
+    }
+    .goodsList{
+        height: 500px;
+        overflow: hidden;
+        .goodsInner{
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            .GoodsItems{
+                box-sizing: border-box;
+                margin-right: 18px;
+                width: 249px;
+            }
+            .no-margin {
+                margin-right: 0; 
+            }
+        }
+        img{
+                width: 249px;
+                height: 320px;
+            }
+        .leftBtn, .rightBtn {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-color: white;
+            border-style: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            top: 160px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .leftBtn{
+            left: 0;
+            transform: translate(-50%, 0);
+        }
+        .rightBtn{
+            right: 0;
+            transform: translate(50%, 0);
+        }
+    }
+}

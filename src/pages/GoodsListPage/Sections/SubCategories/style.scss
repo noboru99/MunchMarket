@@ -1,0 +1,30 @@
+.subCategoryUl{
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 16px 83px;
+    overflow: hidden;
+    margin-top: 28px;
+    padding: 30px 40px;
+    border: 1px solid rgb(226, 226, 226);
+    line-height: 20px;
+    .subCategoryItem{
+        cursor: pointer;
+        .subCategoryItemName{
+            list-style: none;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+        }
+    }
+    .subCategoryItem:hover .subCategoryItemName{
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(95, 0, 128);
+    }
+    .selected .subCategoryItemName{
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(95, 0, 128);
+    }
+}

@@ -1,0 +1,216 @@
+.registerFormSection{
+    width: 640px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    .register{
+        margin-bottom: 50px;
+        font-size: 28px;
+        line-height: 35px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #333;
+    }
+    .Required{
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgb(51, 51, 51);
+        font-size: 12px;
+        color: rgb(102, 102, 102);
+        line-height: 17px;
+        text-align: right;
+    }
+    .registerFomBox{
+        form{
+            input{
+                width: 100%;
+                height: 46px;
+                padding: 0px 11px 1px 15px;
+                border-radius: 4px;
+                border: 1px solid rgb(221, 221, 221);
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.5;
+                color: rgb(51, 51, 51);
+                outline: none;
+                box-sizing: border-box;
+            }
+            .InputBox{
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                display: inline-flex;
+                padding: 10px 20px 10px 20px;
+                .Text{
+                    width: 139px;
+                    padding-top: 12px;
+                    font-weight: 500;
+                    color: rgb(51, 51, 51);
+                    font-size: 20px;
+                    
+                }
+                .inputSection{
+                    height: auto;
+                    width: 333px;
+                    .addressBtn{
+                        width: 100%;
+                        height: 46px;
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgb(95, 0, 128);
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgb(95, 0, 128);
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    // .moreSearchBtn{
+                       
+                    // }
+                    .deliveredAddress{
+                        display: inline-block;
+                        width: 100%;
+                        height: 46px;
+                        padding: 0px 11px 0px 15px;
+                        align-content: center;
+                        border-radius: 4px;
+                        border: 1px solid rgb(221, 221, 221);
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: rgb(51, 51, 51);
+                        outline: none;
+                        box-sizing: border-box;
+                        margin-bottom: 12px;
+                    }
+                    .infoMessage{
+                        display: block;
+                        margin-top: 10px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: rgb(102, 102, 102);
+                    }
+                    
+                    .errorMessageSection{
+                        width: 100%;
+                        padding: 10px 0px;
+                        .errorMessage{
+                            color: rgb(240, 63, 64);
+                            font-size: 13px;
+                        }
+                    }
+                    .registerBtn{
+                        width: 100%;
+                        height: 46px;
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgb(95, 0, 128);
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgb(95, 0, 128);
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .overlapSection{
+                    width: 120px;
+                    margin-left: 8px;
+                    button{
+                        width: 100%;
+                        height: 44px;
+                        padding: 0 10px;
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgb(95, 0, 128);
+                        border-radius: 3px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgb(95, 0, 128);
+                    }
+                    .completedBtn{
+                        border-color: rgb(211, 221, 221);
+                        color: rgb(211, 221, 221);;
+                    }
+                    .moreSearchBtn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    }
+                }
+                .radioSection{
+                    display: flex;
+                    justify-content: space-between;
+                    .radioLabel{
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        .radioInput{
+                            box-sizing: border-box;
+                            padding: 0;
+                            overflow: hidden;
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            clip: rect(0px, 0px, 0px, 0px);
+                        }
+                        .radioInput:checked + .radioBtnOut {
+                            background-color: rgb(95, 0, 128);
+                            border-color:rgb(95, 0, 128); 
+                        }
+                        .radioInput:checked + .radioBtnOut .radioBtnIn {
+                            background-color: white; 
+                        }
+                        .radioBtnOut{
+                            min-width: 24px;
+                            min-height: 24px;
+                            display: inline-block;
+                            position: relative;
+                            border-radius: 50%;
+                            background-color: white;
+                            border: 1px solid rgb(221, 221, 221);
+                            .radioBtnIn{
+                                width: 10px;
+                                height: 10px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                border-radius: 50%;
+                            }
+                        }
+                        .radioText{
+                            font-size: 14px;
+                            margin-left: 12px;
+                        }
+                    }
+                    
+                }
+                .birthInputSection{
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid rgb(204, 204, 204);
+                    border-radius: 3px;
+                    input{
+                        border-style: none;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                    span{
+                        color: rgb(204, 204, 204);
+                    }
+                }
+            }
+        }
+    }
+    .modalSection{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 1;
+    }
+}
