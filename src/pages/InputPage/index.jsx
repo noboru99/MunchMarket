@@ -1,7 +1,8 @@
 
 import InputSection from "./Section"
 import { useForm } from "react-hook-form";
-
+import CategoryId from "./Section/categoryId";
+//카테고리 들고오는 부분 만들기
 // 이미지를 등록하는 폼
 // 불리언값을 등록하는 인풋
 
@@ -14,6 +15,7 @@ const InputPage = () => {
     } = useForm({ mode: "onChange" })
     const onSubmit = ({
       categoryId,
+      
       productName,
       basePrice,
       shortDescription,
@@ -63,11 +65,11 @@ const InputPage = () => {
     <div>
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         {/* 카테고리id */}
+
         <div>
-          <InputSection
-            label="categoryID"
-            id="categoryID"
-            type="number"
+          <CategoryId
+            label="categoryId"
+            id="categoryId"
             register={register("categoryId")}
           />
         </div>
