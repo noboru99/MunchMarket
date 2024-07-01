@@ -2,64 +2,41 @@
 import InputSection from "./Section"
 import { useForm } from "react-hook-form";
 import CategoryId from "./Section/categoryId";
+import FileUpload from "./Section/FileUpload";
+import { productRegister } from "../../store/thunkFuctions";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import PackingTypeId from "./Section/PackagingTypeId";
+
 //카테고리 들고오는 부분 만들기
 // 이미지를 등록하는 폼
 // 불리언값을 등록하는 인풋
 
 const InputPage = () => {
-
+  const goods = useSelector((state) => state.goods)
+  console.log("goods", goods.goodsData)
+  const [getImages, setGetImages] = useState(null)
+  const dispatch = useDispatch()
     const {
         register,
-        handleSubmit,
+      handleSubmit,
+        setValue,
         reset
     } = useForm({ mode: "onChange" })
-    const onSubmit = ({
-      categoryId,
+    const onSubmit = (data) => {
+      const { mainImage, subImage, ...restData } = data;
+
+      const body = {
+        ...restData,
+        images: {
+          mainImage, // 배열이 아니라면 그냥 파일 객체를 할당
+          subImage, // 배열이 아니라면 그냥 파일 객체를 할당/ 파일 객체의 첫 번째 요소
+        },
+      };
       
-      productName,
-      basePrice,
-      shortDescription,
-      stock,
-      deliveryDescription,
-      packagingTypeId,
-      origin,
-      unit,
-      volume,
-      expirationDescription,
-      allergyDescription,
-      guideDescription,
-      productImages,
-      productDesTop1,
-      productDesTop2,
-      productDesTopMain,
-      isOnSale,
-      salePercentage,
-      isPurchaseStatus,
-    }) => {
-        const body = {
-          categoryId,
-          productName,
-          basePrice,
-          shortDescription,
-          stock,
-          deliveryDescription,
-          packagingTypeId,
-          origin,
-          unit,
-          volume,
-          expirationDescription,
-          allergyDescription,
-          guideDescription,
-          productImages,
-          productDesTop1,
-          productDesTop2,
-          productDesTopMain,
-          isOnSale,
-          salePercentage,
-          isPurchaseStatus,
-        };
-        console.log(body)
-        reset();
+      dispatch(productRegister({ data: body, setGetImages }));
+      console.log(getImages)
+      reset();
     };
   return (
     <div>
@@ -101,7 +78,7 @@ const InputPage = () => {
           <InputSection
             label="stock"
             id="stock"
-            type="text"
+            type="number"
             register={register("stock")}
           />
         </div>
@@ -113,14 +90,22 @@ const InputPage = () => {
             register={register("deliveryDescription")}
           />
         </div>
-        <div>
+        {/* <div>
           <InputSection
             label="packagingTypeId"
             id="packagingTypeId"
-            type="text"
+            type="number"
+            register={register("packagingTypeId")}
+          />
+        </div> */}
+        <div>
+          <PackingTypeId
+            label="deliveryDescription"
+            id="deliveryDescription"
             register={register("packagingTypeId")}
           />
         </div>
+
         <div>
           <InputSection
             label="origin"
@@ -219,8 +204,29 @@ const InputPage = () => {
             register={register("isPurchaseStatus")}
           />
         </div>
+
+        <div>
+          <FileUpload setValue={setValue} name="mainImage" />
+        </div>
+
+        <div>
+          <FileUpload setValue={setValue} name="subImage" />
+        </div>
         <button>送信</button>
       </form>
+      <div>
+        {getImages && (
+          <img
+            src={getImages}
+            alt=""
+            style={{ width: "100px", height: "100px" }}
+          />
+        )}
+      </div>
+
+      <div>
+        
+      </div>
     </div>
   );
 }

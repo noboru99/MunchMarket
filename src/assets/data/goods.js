@@ -98,4 +98,94 @@ export const goods = [
     imgUrl:
       "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
   },
+  {
+    id: 12,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 13,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 14,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 15,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 16,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 17,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 18,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 19,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 20,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
+  {
+    id: 21,
+    companyName: "달떡볶이",
+    name: "인기 떡꼬치 2종",
+    price: 5900,
+    salePercent: 30,
+    imgUrl:
+      "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/25de96f8-41eb-4f12-bede-fe902573b1d3.jpg",
+  },
 ];

@@ -47,7 +47,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
           </Route>
-          <Route path="/goodslist" element={<GoodsListPage />} />
+          <Route path="/goodslist/:categoryId" element={<GoodsListPage />} />
           <Route path="/goodsinput" element={<InputPage />} />
         </Route>
       </Routes>

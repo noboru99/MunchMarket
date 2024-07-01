@@ -10,7 +10,7 @@ export const handleCheckIDAvailability = async (
     setError("");
     setIsUserIdChecked(null);
   try {
-    const response = await axiosInstance.post(`/validate`, body, {
+    const response = await axiosInstance.post(`member/validate`, body, {
       // 쿼리 파라미터로 loginId 전달
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const handleCheckPhoneVerify = async (
   setIsLoading(true);
   setError("");
   try {
-    const response = await axiosInstance.post(`/send-sms`, body, {
+    const response = await axiosInstance.post(`member/send-sms`, body, {
       // 쿼리 파라미터로 loginId 전달
       headers: {
         "Content-Type": "application/json",
@@ -71,13 +71,17 @@ export const CheckAuthenticationCode = async (
   setError("");
   setCheckedPhoneVerifiedCode(null);
   try {
-    const response = await axiosInstance.post(`/verification-code`, body, {
-      // 쿼리 파라미터로 loginId 전달
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
+    const response = await axiosInstance.post(
+      `member/verification-code`,
+      body,
+      {
+        // 쿼리 파라미터로 loginId 전달
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    );
     console.log("response", response);
     return response.data;
   } catch (error) {
@@ -100,7 +104,7 @@ export const handleCheckEmailAvailability = async (
   setError("");
   setIsUserEmailChecked(null);
   try {
-    const response = await axiosInstance.post(`/validate`, body, {
+    const response = await axiosInstance.post(`member/validate`, body, {
       // 쿼리 파라미터로 loginId 전달
       headers: {
         "Content-Type": "application/json",

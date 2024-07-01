@@ -192,6 +192,13 @@
         top: 100%;
         width: 100%;
         height: auto;
+        z-index: 100;
+        // margin: 1px solid black;
+        .categoryModalSection{
+            width: 1050px;
+            height: 100%;
+            margin: 0 auto;
+        }
     }
 }
 

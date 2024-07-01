@@ -6,16 +6,19 @@ import {
   cartIcon,
 
 } from "../../assets/images/imageUrls";
-
 import "./styles/style.scss"
-import CategoryModal from "./Sections/categoryModal";
+// import CategoryModal from "./Sections/categoryModal";
+import CategoryItems from "./Sections/categoryItems";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logoutUer } from "../../store/thunkFuctions";
+import { getCategories } from "../../utils/getCategory";
+//카테고리 부분 호버하면 카테고리 들이 나오도록하는 부분이니까 여기서 요청 보내야함
 const NavBar = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [isCategoryModal, setIsCategoryModal] = useState(false);
+  const [categoriesData, setCategoriesData] = useState(null);
   const routes = [
     { to: "/login", name: "login", auth: false },
     { to: "/register", name: "register", auth: false },
@@ -27,30 +30,36 @@ const NavBar = () => {
     navigate("/")
   }
 
+  const handleGetCategories = async () => {
+    const response = await getCategories()
+    
+    setCategoriesData(response);
+    
+  }
+  
   return (
     <>
       <div className="NavBarSection">
         <div className="NavBarContainer">
           <div className="NavAuthItems">
-            {routes.map(({to,name,auth}) => {
-              if(isAuth !== auth) return null
-              if(name === "logout"){
-                return <span key={name} className="registerBtn">
-                  <Link
-                    className="linkBtn"
-                    onClick={handleLogout}
-                  >
-                          {name}
-                      </Link></span>
-                } else {
-                return <span key={name} className="registerBtn">
-                  <Link to={to} >
-                    {name} |
-                  </Link>
+            {routes.map(({ to, name, auth }) => {
+              if (isAuth !== auth) return null;
+              if (name === "logout") {
+                return (
+                  <span key={name} className="registerBtn">
+                    <Link className="linkBtn" onClick={handleLogout}>
+                      {name}
+                    </Link>
                   </span>
-                }
-              })
-            }
+                );
+              } else {
+                return (
+                  <span key={name} className="registerBtn">
+                    <Link to={to}>{name} |</Link>
+                  </span>
+                );
+              }
+            })}
             <span>|</span>
             <span className="customerService">고객센터 ▼</span>
           </div>
@@ -82,7 +91,10 @@ const NavBar = () => {
         <div className="NavCategoryItems">
           <div
             className="categorySection"
-            onMouseEnter={() => setIsCategoryModal(true)}
+            onMouseEnter={() => {
+              setIsCategoryModal(true);
+              handleGetCategories();
+            }}
             onMouseLeave={() => setIsCategoryModal(false)}
           >
             <span className="categoryImg"></span>
@@ -99,18 +111,23 @@ const NavBar = () => {
           </div>
         </div>
 
-        {isCategoryModal && (
+        {isCategoryModal && categoriesData && (
           <div
             className="categoryModal"
             onMouseEnter={() => setIsCategoryModal(true)}
             onMouseLeave={() => setIsCategoryModal(false)}
           >
-            <CategoryModal />
+            <div
+              className="categoryModalSection"
+              onMouseEnter={() => setIsCategoryModal(true)}
+              onMouseLeave={() => setIsCategoryModal(false)}
+            >
+              <CategoryItems categoriesData={categoriesData} />
+            </div>
           </div>
         )}
       </div>
     </>
   );
 }
-
 export default NavBar

@@ -7,6 +7,9 @@ export const registerUser = createAsyncThunk(
     try {
       const response = await axiosInstance.post(`/join`, body);
       console.log("responseData", response.data);
+      
+
+
       return response.data;
     } catch (error) {
       console.log(error);
@@ -66,3 +69,40 @@ export const logoutUer = createAsyncThunk("logout", async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.response.data || error.message);
   }
 });
+
+
+export const productRegister = createAsyncThunk(
+  "/admin/product/register",
+  async ({ data, setGetImages }, thunkAPI) => {
+    const formData = new FormData();
+
+    for (const key in data) {
+      if (key === "images") {
+        formData.append("images[mainImage]", data.images.mainImage); // `images[mainImage]`로 추가
+        formData.append("images[subImage]", data.images.subImage); // `images[subImage]`로 추가
+      } else {
+        formData.append(key, data[key]);
+      }
+    }
+
+    console.log("reqData", data);
+    try {
+      const response = await axiosInstance.post(
+        `/admin/product/register`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log("responseData", response.data);
+      console.log("response.data.mainImage", response.data.mainImage);
+      setGetImages(response.data.mainImage);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return thunkAPI.rejectWithValue(error.response.data || error.message);
+    }
+  }
+);
