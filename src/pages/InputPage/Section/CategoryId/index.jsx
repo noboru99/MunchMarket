@@ -1,3 +1,4 @@
+import "./style.scss"
 import axiosInstance from "../../../../utils/axios";
 import { useEffect, useState } from "react";
 // import { categories } from "../../../../assets/data/categories";
@@ -8,7 +9,7 @@ const CategoryId = ({ register, label, id }) => {
     // console.log("categories", categories);
   const handleGetCategories = async() => {
     try {
-      const response = await axiosInstance.get(`/admin/product/categories`);
+      const response = await axiosInstance.get(`/categories`);
       console.log("response", response.data.data)
       setCategories(response.data.data)
     } catch (error) {
@@ -33,7 +34,7 @@ const CategoryId = ({ register, label, id }) => {
   }
     // console.log("selectedCategory", selectedCategory);
   return (
-    <div>
+    <div className="inputSection-categoryID">
       <select id={id} label={label} onChange={handleChange}>
         {categories.map((category) => (
           <option key={category.id} value={category.id}>
@@ -41,19 +42,22 @@ const CategoryId = ({ register, label, id }) => {
           </option>
         ))}
       </select>
-      {selectedCategory &&
-        selectedCategory.children.map((subCategory) => (
-          <div key={subCategory.id}>
-            <label htmlFor={subCategory.id}>{subCategory.categoryName}</label>
-            <input
-              type="radio"
-              key={subCategory.id}
-              value={subCategory.id}
-              {...register}
-              onClick={handleSubCategory}
-            />
-          </div>
-        ))}
+      <div className="input-categoryId-radioBox">
+        {selectedCategory &&
+          selectedCategory.children.map((subCategory) => (
+            <div key={subCategory.id}>
+              <label htmlFor={subCategory.id}>{subCategory.categoryName}</label>
+              <input
+                type="radio"
+                key={subCategory.id}
+                value={subCategory.id}
+                {...register}
+                onClick={handleSubCategory}
+                className="radioBtn"
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

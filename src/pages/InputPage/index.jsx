@@ -1,4 +1,4 @@
-
+import "./style.scss"
 import InputSection from "./Section"
 import { useForm } from "react-hook-form";
 import CategoryId from "./Section/categoryId";
@@ -40,7 +40,8 @@ const InputPage = () => {
     };
   return (
     <div>
-      <form action="" onSubmit={handleSubmit(onSubmit)}>
+      <form action="" onSubmit={handleSubmit(onSubmit)}
+      className="inputFormDataSection">
         {/* 카테고리id */}
 
         <div>
